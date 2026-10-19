@@ -26,7 +26,9 @@ const products = await getCollection("products");
 
 {products.map((product) => (
   <li>
+     <a href={`/products/${product.data.id}`}>
     <ProductCard product={product.data} />
+  </a>
   </li>
 ))}
 
